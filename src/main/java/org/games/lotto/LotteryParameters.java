@@ -1,6 +1,6 @@
-package org.lotto;
+package org.games.lotto;
 
-public class LotteryParameters {
+class LotteryParameters {
     private static int lotterySize = 6;
     private static int numbersRange = 99;
     private static int cashPrize = 650000000;

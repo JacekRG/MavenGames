@@ -1,14 +1,14 @@
-package org.lotto;
+package org.games.lotto;
 
 import java.util.HashSet;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 import java.util.Set;
 
-public class UserInput {
+class UserInput {
     Set<Integer> typedNumbers = new HashSet<>();
 
-    public Set<Integer> typing() {
+    Set<Integer> readUserNumbers() {
         Scanner userEnteredNumber    = new Scanner(System.in);
         int typingCounter = 1;
         while (typedNumbers.size() < LotteryParameters.getLotterySize()) {

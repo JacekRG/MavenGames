@@ -1,7 +1,7 @@
-package org.lotto;
+package org.games.lotto;
 
-import org.lotto.LotteryParameters;
-import org.lotto.NumbersGenerator;
+import org.games.NumbersGenerator;
+import org.lotto.games.lotto.NumbersGenerator;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

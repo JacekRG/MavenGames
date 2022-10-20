@@ -1,7 +1,8 @@
-package org.lotto;
+package org.games;
 
 import java.util.HashSet;
 import java.util.Set;
+import org.games.lotto.LotteryParameters;
 
 public class NumbersGenerator {
     Set<Integer> luckyNumbers = new HashSet<>();
