@@ -5,7 +5,7 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 import java.util.Set;
 
-public class UserShots {
+public class UserInput {
     Set<Integer> typedNumbers = new HashSet<>();
 
     public Set<Integer> typing() {
