@@ -10,6 +10,6 @@ public class VictoryCommission {
             System.out.println("You won $ " + LotteryParameters.getCashPrize());
         } else
             System.out.println("Lucky numbers today: " + dailyLuckyNumbers.luckyNumbers
-                    + "\n Your types: " + userShots.typedNumbers + "\n You are the loser XD");
+                    + "\n Your types: " + userShots.typedNumbers + "\n You are the loser xXD");
     }
 }
