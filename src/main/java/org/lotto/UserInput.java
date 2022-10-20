@@ -9,13 +9,13 @@ public class UserInput {
     Set<Integer> typedNumbers = new HashSet<>();
 
     public Set<Integer> typing() {
-        Scanner userInputNo = new Scanner(System.in);
+        Scanner userEnteredNumber    = new Scanner(System.in);
         int typingCounter = 1;
         while (typedNumbers.size() < LotteryParameters.getLotterySize()) {
             System.out.println("Insert " + typingCounter + " of " + LotteryParameters.getLotterySize() + " numbers");
             int userProposal;
             try {
-                userProposal = userInputNo.nextInt();
+                userProposal = userEnteredNumber.nextInt();
             } catch (InputMismatchException e) {
                 System.out.println("The value entered is not a number, you have wasted your coupon");
                 break;

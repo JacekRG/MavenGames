@@ -3,6 +3,7 @@ package org.lotto;
 public class LotteryParameters {
     private static int lotterySize = 6;
     private static int numbersRange = 99;
+    private static int cashPrize = 650000000;
 
     public static int getLotterySize() {
         return lotterySize;
@@ -28,5 +29,5 @@ public class LotteryParameters {
         LotteryParameters.cashPrize = cashPrize;
     }
 
-    private static int cashPrize = 650000000;
+
 }
