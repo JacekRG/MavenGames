@@ -1,18 +1,25 @@
-package org.lotto;
+package org.games.lotto;
 
 import java.util.HashSet;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 import java.util.Set;
+import org.games.ConfigurationProvider;
 
-public class UserInput {
+class UserInput {
+
+    private final LottoConfiguration configuration;
     Set<Integer> typedNumbers = new HashSet<>();
 
-    public Set<Integer> typing() {
-        Scanner userEnteredNumber    = new Scanner(System.in);
+    UserInput(ConfigurationProvider configuration) {
+        this.configuration = configuration.loadConfiguration();
+    }
+
+    Set<Integer> readUserNumbers() {
+        Scanner userEnteredNumber = new Scanner(System.in);
         int typingCounter = 1;
-        while (typedNumbers.size() < LotteryParameters.getLotterySize()) {
-            System.out.println("Insert " + typingCounter + " of " + LotteryParameters.getLotterySize() + " numbers");
+        while (typedNumbers.size() < configuration.getLotterySize()) {
+            System.out.println("Insert " + typingCounter + " of " + configuration.getLotterySize() + " numbers");
             int userProposal;
             try {
                 userProposal = userEnteredNumber.nextInt();
@@ -20,7 +27,7 @@ public class UserInput {
                 System.out.println("The value entered is not a number, you have wasted your coupon");
                 break;
             }
-            if (userProposal < 1 || userProposal > LotteryParameters.getNumbersRange()) {
+            if (userProposal < 1 || userProposal > configuration.getNumbersRange()) {
                 System.out.println("Number out of range");
             } else if (!typedNumbers.contains(userProposal)) {
                 typingCounter++;
