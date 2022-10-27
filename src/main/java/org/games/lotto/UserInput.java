@@ -1,21 +1,19 @@
 package org.games.lotto;
 
-import java.util.HashSet;
-import java.util.InputMismatchException;
-import java.util.Scanner;
-import java.util.Set;
+import java.util.*;
+
 import org.games.ConfigurationProvider;
 
-class UserInput {
-
+public class UserInput implements UserNumbersReading {
     private final LottoConfiguration configuration;
     Set<Integer> typedNumbers = new HashSet<>();
 
-    UserInput(ConfigurationProvider configuration) {
-        this.configuration = configuration.loadConfiguration();
+    public UserInput(LottoConfiguration configuration) {
+        this.configuration = configuration;
     }
 
-    Set<Integer> readUserNumbers() {
+    @Override
+    public Collection<Integer> readUserNumbers() {
         Scanner userEnteredNumber = new Scanner(System.in);
         int typingCounter = 1;
         while (typedNumbers.size() < configuration.getLotterySize()) {

@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>pl.devfoundry</groupId>
-    <artifactId>unit-testing-java</artifactId>
+    <groupId>org.lotto</groupId>
+    <artifactId>OnlineGames</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
@@ -72,6 +72,11 @@
             <artifactId>assertj-core</artifactId>
             <version>${assertj-core.version}</version>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.13.2.2</version>
         </dependency>
     </dependencies>
 

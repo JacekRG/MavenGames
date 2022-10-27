@@ -4,7 +4,6 @@ import java.util.Collection;
 import java.util.Set;
 
 public class WinningNumbersGeneratorTestImpl implements WinningNumberGenerable {
-
     Collection<Integer> numbers;
 
     WinningNumbersGeneratorTestImpl(Collection<Integer> numbers) {

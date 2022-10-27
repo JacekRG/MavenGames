@@ -2,6 +2,7 @@ package org.games.lotto;
 
 import java.util.Collection;
 import java.util.Set;
+
 import org.games.ConfigurationProvider;
 
 class ResultChecker {
